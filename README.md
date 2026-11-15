@@ -12,11 +12,11 @@ Each sketch is independent. Use them as a reference when wiring a module for the
 - [Requirements](#requirements)
 - [Getting Started](#getting-started)
 - [Wiring](#wiring)
-  - [Servo Motor](#1-servo-motor-servocpp)
-  - [HC-SR04 Ultrasonic Sensor](#2-hc-sr04-ultrasonic-sensor-esp32ultrasensorcpp)
-  - [4x3 Matrix Keypad](#3-4x3-matrix-keypad-keypadcpp)
-  - [4x4 Keypad + 16x2 I2C LCD](#4-4x4-keypad--16x2-i2c-lcd-lcdkeypadcpp)
-  - [1.3" SH1106 OLED](#5-13-sh1106-oled-oledesp32cpp)
+  - [Servo Motor](#1-servo-motor-servo_sweepcpp)
+  - [HC-SR04 Ultrasonic Sensor](#2-hc-sr04-ultrasonic-sensor-ultrasonic_distancecpp)
+  - [4x3 Matrix Keypad](#3-4x3-matrix-keypad-keypad_4x3cpp)
+  - [4x4 Keypad + 16x2 I2C LCD](#4-4x4-keypad--16x2-i2c-lcd-keypad_lcd_inputcpp)
+  - [1.3" SH1106 OLED](#5-13-sh1106-oled-oled_sh1106_displaycpp)
 - [Troubleshooting](#troubleshooting)
 - [ESP32 Pin Notes](#esp32-pin-notes)
 
@@ -26,11 +26,11 @@ Each sketch is independent. Use them as a reference when wiring a module for the
 
 | Sketch | Peripheral | What it does |
 |--------|------------|--------------|
-| [servo.cpp](servo.cpp) | SG90 / MG996R servo | Sweeps the servo from 0° to 180° and back continuously |
-| [esp32+ultrasensor.cpp](esp32+ultrasensor.cpp) | HC-SR04 ultrasonic sensor | Prints the measured distance in cm to the Serial Monitor every 500 ms |
-| [keypad.cpp](keypad.cpp) | 4x3 membrane keypad | Prints each key press to the Serial Monitor |
-| [lcd+keypad.cpp](lcd+keypad.cpp) | 4x4 keypad + 16x2 I2C LCD | Two-step input form: enter a phone number, then an amount, and confirm |
-| [oled+esp32.cpp](oled+esp32.cpp) | 1.3" 128x64 OLED (SH1106) | Displays a test message and frame to verify the display works |
+| [servo_sweep.cpp](servo_sweep.cpp) | SG90 / MG996R servo | Sweeps the servo from 0° to 180° and back continuously |
+| [ultrasonic_distance.cpp](ultrasonic_distance.cpp) | HC-SR04 ultrasonic sensor | Prints the measured distance in cm to the Serial Monitor every 500 ms |
+| [keypad_4x3.cpp](keypad_4x3.cpp) | 4x3 membrane keypad | Prints each key press to the Serial Monitor |
+| [keypad_lcd_input.cpp](keypad_lcd_input.cpp) | 4x4 keypad + 16x2 I2C LCD | Two-step input form: enter a phone number, then an amount, and confirm |
+| [oled_sh1106_display.cpp](oled_sh1106_display.cpp) | 1.3" 128x64 OLED (SH1106) | Displays a test message and frame to verify the display works |
 
 ---
 
@@ -55,11 +55,11 @@ Install from the Arduino IDE Library Manager (**Sketch → Include Library → M
 
 | Library | Author | Used by |
 |---------|--------|---------|
-| ESP32Servo | Kevin Harrington | `servo.cpp` |
-| Keypad | Mark Stanley, Alexander Brevig | `keypad.cpp`, `lcd+keypad.cpp` |
-| LiquidCrystal I2C | Frank de Brabander | `lcd+keypad.cpp` |
-| Adafruit GFX Library | Adafruit | `oled+esp32.cpp` |
-| Adafruit SH110X | Adafruit | `oled+esp32.cpp` |
+| ESP32Servo | Kevin Harrington | `servo_sweep.cpp` |
+| Keypad | Mark Stanley, Alexander Brevig | `keypad_4x3.cpp`, `keypad_lcd_input.cpp` |
+| LiquidCrystal I2C | Frank de Brabander | `keypad_lcd_input.cpp` |
+| Adafruit GFX Library | Adafruit | `oled_sh1106_display.cpp` |
+| Adafruit SH110X | Adafruit | `oled_sh1106_display.cpp` |
 
 `Wire` (I2C) ships with the ESP32 core and needs no separate install. The ultrasonic sensor example uses no external libraries.
 
@@ -87,9 +87,9 @@ cd esp32turnservomotor
 
 The Arduino IDE expects each sketch to be a `.ino` file inside a folder with the same name. To run an example:
 
-1. Create a folder, for example `servo/`.
-2. Copy the contents of the `.cpp` file into `servo/servo.ino`.
-3. Open `servo.ino` in the Arduino IDE.
+1. Create a folder, for example `servo_sweep/`.
+2. Copy the contents of the `.cpp` file into `servo_sweep/servo_sweep.ino`.
+3. Open `servo_sweep.ino` in the Arduino IDE.
 
 ### 4. Configure and upload
 
@@ -107,7 +107,7 @@ Click **Upload**, then open the **Serial Monitor** at **115200 baud**.
 
 ## Wiring
 
-### 1. Servo Motor (`servo.cpp`)
+### 1. Servo Motor (`servo_sweep.cpp`)
 
 | Servo Wire | Connect To |
 |------------|------------|
@@ -122,7 +122,7 @@ Click **Upload**, then open the **Serial Monitor** at **115200 baud**.
 
 The servo is driven at 50 Hz with a 500-2400 µs pulse range. Adjust these values in `myServo.attach()` if your servo does not reach its full travel.
 
-### 2. HC-SR04 Ultrasonic Sensor (`esp32+ultrasensor.cpp`)
+### 2. HC-SR04 Ultrasonic Sensor (`ultrasonic_distance.cpp`)
 
 | HC-SR04 Pin | ESP32 Pin |
 |-------------|-----------|
@@ -136,7 +136,7 @@ The servo is driven at 50 Hz with a 500-2400 µs pulse range. Adjust these value
 
 A reading of `0.00 cm` means no echo was received within the 30 ms timeout (object out of range, or a wiring fault).
 
-### 3. 4x3 Matrix Keypad (`keypad.cpp`)
+### 3. 4x3 Matrix Keypad (`keypad_4x3.cpp`)
 
 | Keypad Pin | ESP32 GPIO |
 |------------|------------|
@@ -148,7 +148,7 @@ A reading of `0.00 cm` means no echo was received within the 30 ms timeout (obje
 | C2 | 32 |
 | C3 | 13 |
 
-### 4. 4x4 Keypad + 16x2 I2C LCD (`lcd+keypad.cpp`)
+### 4. 4x4 Keypad + 16x2 I2C LCD (`keypad_lcd_input.cpp`)
 
 **LCD (I2C backpack)**
 
@@ -182,7 +182,7 @@ A reading of `0.00 cm` means no echo was received within the 30 ms timeout (obje
 
 The LCD I2C address is set to `0x27`. If the screen lights up but shows no text, change it to `0x3F` and adjust the contrast potentiometer on the back of the module.
 
-### 5. 1.3" SH1106 OLED (`oled+esp32.cpp`)
+### 5. 1.3" SH1106 OLED (`oled_sh1106_display.cpp`)
 
 | OLED Pin | ESP32 Pin |
 |----------|-----------|
