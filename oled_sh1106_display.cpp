@@ -1,91 +1,75 @@
+/*
+ * oled_sh1106_display.cpp
+ * ------------------------------------------------------------
+ * Test sketch for a 1.3" 128x64 OLED (e.g. JMD 1.3A) with the
+ * SH1106 controller. Shows a message and a frame to confirm
+ * the display is wired and working.
+ *
+ * Board:     ESP32 Dev Module
+ * Libraries: Adafruit GFX Library (Adafruit)
+ *            Adafruit SH110X (Adafruit)
+ * Baud rate: 115200
+ *
+ * Wiring (I2C)
+ * ------------------------------------------------------------
+ * | OLED Pin | ESP32 Pin |
+ * |----------|-----------|
+ * | VCC      | 3.3V      |
+ * | GND      | GND       |
+ * | SDA      | GPIO 21   |
+ * | SCL      | GPIO 22   |
+ *
+ * Notes:
+ * - Most modules use I2C address 0x3C. Some use 0x3D.
+ * - This display needs the SH1106 driver, not SSD1306.
+ * - Keep wires short for a stable picture.
+ */
+
 #include <Wire.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SH110X.h>
 
-Adafruit_SH1106G display(128, 64, &Wire);
+// ---------- Display configuration ----------
+const int SCREEN_WIDTH  = 128;
+const int SCREEN_HEIGHT = 64;
+const uint8_t OLED_ADDRESS = 0x3C;  // Try 0x3D if the screen stays blank
 
+const int I2C_SDA_PIN = 21;
+const int I2C_SCL_PIN = 22;
+
+Adafruit_SH1106G display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire);
+
+// ---------- Setup ----------
 void setup() {
   Serial.begin(115200);
-  Wire.begin(21, 22);
+  Wire.begin(I2C_SDA_PIN, I2C_SCL_PIN);
 
-  if (!display.begin(0x3C, true)) {
-    Serial.println("OLED failed to start");
-    while (1);
+  if (!display.begin(OLED_ADDRESS, true)) {
+    Serial.println("OLED not found. Check wiring and I2C address.");
+    while (true) {
+      delay(1000);  // Stop here
+    }
   }
 
   display.clearDisplay();
 
+  // Text
   display.setTextSize(1);
   display.setTextColor(SH110X_WHITE);
   display.setCursor(0, 0);
-
   display.println("OLED WORKING!");
   display.println("ESP32 OK");
 
-  display.drawRect(0, 30, 128, 34, SH110X_WHITE);
+  // Frame across the bottom half of the screen
+  display.drawRect(0, 30, SCREEN_WIDTH, 34, SH110X_WHITE);
 
+  // Nothing appears until display() is called
   display.display();
+
+  Serial.println("OLED ready.");
 }
 
-void loop() {}
-
-
-ESP32 + JMD 1.3A OLED (SH1106) Setup Guide
-Overview
-
-This project uses a 1.3-inch 128x64 OLED display (JMD 1.3A) with an ESP32 over I2C communication. The display is driven using the SH1106 controller.
-
-Hardware Connections (I2C)
-OLED Pin	ESP32 Pin
-VCC	3.3V
-GND	GND
-SDA	GPIO 21
-SCL	GPIO 22
-Important Notes
-Use 3.3V first (safe default for ESP32)
-Keep wires short for stable display output
-If screen is blank, verify I2C address (0x3C or 0x3D)
-Required Arduino Libraries
-
-Install these from Arduino Library Manager:
-
-1. Adafruit GFX Library
-Name: Adafruit GFX Library
-Purpose: Core graphics functions (text, shapes, bitmap rendering)
-2. Adafruit SH110X Library
-Name: Adafruit SH110X
-Purpose: Driver for SH1106 OLED controller used in JMD 1.3A
-I2C Address
-
-Most JMD 1.3A OLED modules use:
-
-0x3C (most common)
-0x3D (alternative)
-
-If unsure, run an I2C scanner.
-
-Basic Initialization Code
-Wire.begin(21, 22);
-
-if (!display.begin(0x3C, true)) {
-  Serial.println("OLED failed");
-  while (1);
+// ---------- Main loop ----------
+void loop() {
+  // Nothing to do: the screen is drawn once in setup()
 }
-Common Issues
-Blank screen
-Wrong I2C address
-Missing GND connection
-Wrong driver (must be SH1106, not SSD1306)
-Not detected in scan
-Wiring issue (SDA/SCL swapped)
-No power to OLED
-Compiles but nothing shows
-Missing display.display();
-Summary
-Driver: SH1106 (Adafruit SH110X library)
-Interface: I2C
-ESP32 Pins: 21 (SDA), 22 (SCL)
-Address: 0x3C / 0x3D
-
-If you want, I can also 
-turn this into a GitHub-ready project structure with examples and animations.
