@@ -38,6 +38,13 @@ Each sketch is independent. Use them as a reference when wiring a module for the
 
 ### Hardware
 
+<p align="center">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ESP32_Dev_Board.jpg?width=360" alt="ESP32 DevKit board mounted next to a breadboard" width="300">
+</p>
+<p align="center"><sub>Photo: <a href="https://commons.wikimedia.org/wiki/File:ESP32_Dev_Board.jpg">ESP32 Dev Board</a> by Edwiyanto, Wikimedia Commons, CC BY-SA 4.0.</sub></p>
+
+Any standard ESP32 DevKit (30 or 38 pin) works with these examples.
+
 - ESP32 development board (ESP32 Dev Module / DevKit V1)
 - USB data cable
 - Breadboard and jumper wires
@@ -110,6 +117,11 @@ Click **Upload**, then open the **Serial Monitor** at **115200 baud**.
 ### 1. Servo Motor (`servo_sweep.cpp`)
 
 <p align="center">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Tower_Pro_SG90_micro_servo_motor.jpg?width=420" alt="Tower Pro SG90 micro servo with its three-wire lead" width="360">
+</p>
+<p align="center"><sub>Photo: <a href="https://commons.wikimedia.org/wiki/File:Tower_Pro_SG90_micro_servo_motor.jpg">Tower Pro SG90 micro servo motor</a> by Suyash Dwivedi, Wikimedia Commons, CC BY-SA 4.0.</sub></p>
+
+<p align="center">
   <img src="images/wiring_servo_sweep.svg" alt="Wiring diagram: ESP32 GPIO 13 to servo signal, external 5-6 V supply to servo power, with a shared ground between the supply and the ESP32" width="800">
 </p>
 
@@ -127,6 +139,11 @@ Click **Upload**, then open the **Serial Monitor** at **115200 baud**.
 The servo is driven at 50 Hz with a 500-2400 µs pulse range. Adjust `PULSE_MIN_US` and `PULSE_MAX_US` in the sketch if your servo does not reach its full travel.
 
 ### 2. HC-SR04 Ultrasonic Sensor (`ultrasonic_distance.cpp`)
+
+<p align="center">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/HC_SR04_Ultrasonic_Module.jpg?width=420" alt="HC-SR04 ultrasonic sensor module showing the VCC, Trig, Echo and GND pins" width="360">
+</p>
+<p align="center"><sub>Photo: <a href="https://commons.wikimedia.org/wiki/File:HC_SR04_Ultrasonic_Module.jpg">HC SR04 Ultrasonic Module</a> by Suyash Dwivedi, Wikimedia Commons, CC BY-SA 4.0.</sub></p>
 
 <p align="center">
   <img src="images/wiring_ultrasonic_distance.svg" alt="Wiring diagram: HC-SR04 VCC to 5V, TRIG to GPIO 5, ECHO to GPIO 18 through a voltage divider, GND to GND" width="800">
@@ -147,6 +164,11 @@ A reading of `0.00 cm` means no echo was received within the 30 ms timeout (obje
 ### 3. 4x3 Matrix Keypad (`keypad_4x3.cpp`)
 
 <p align="center">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Keypad_arduino.jpg?width=420" alt="Membrane matrix keypad with ribbon cable and header pins" width="360">
+</p>
+<p align="center"><sub>Photo: <a href="https://commons.wikimedia.org/wiki/File:Keypad_arduino.jpg">Keypad arduino</a> by Goga504, Wikimedia Commons, CC BY-SA 4.0. Shown: the 4x4 version used in example 4. The 4x3 version is the same without the A-D column.</sub></p>
+
+<p align="center">
   <img src="images/wiring_keypad_4x3.svg" alt="Wiring diagram: keypad rows R1-R4 to GPIO 14, 27, 26, 25 and columns C1-C3 to GPIO 33, 32, 13" width="800">
 </p>
 
@@ -161,6 +183,11 @@ A reading of `0.00 cm` means no echo was received within the 30 ms timeout (obje
 | C3 | 13 |
 
 ### 4. 4x4 Keypad + 16x2 I2C LCD (`keypad_lcd_input.cpp`)
+
+<p align="center">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Mizar32_I2C_LCD_module_16x2.jpg?width=420" alt="16x2 character LCD module displaying the text I2C LCD module 16x2" width="360">
+</p>
+<p align="center"><sub>Photo: <a href="https://commons.wikimedia.org/wiki/File:Mizar32_I2C_LCD_module_16x2.jpg">Mizar32 I2C LCD module 16x2</a> by Martinwguy, Wikimedia Commons, CC BY-SA 3.0.</sub></p>
 
 <p align="center">
   <img src="images/wiring_keypad_lcd_input.svg" alt="Wiring diagram: LCD on 5V, GND, SDA GPIO 21, SCL GPIO 22; keypad rows to GPIO 14, 27, 26, 25 and columns to GPIO 33, 32, 13, 12" width="800">
@@ -199,6 +226,11 @@ A reading of `0.00 cm` means no echo was received within the 30 ms timeout (obje
 The LCD I2C address is set to `0x27`. If the screen lights up but shows no text, change it to `0x3F` and adjust the contrast potentiometer on the back of the module.
 
 ### 5. 1.3" SH1106 OLED (`oled_sh1106_display.cpp`)
+
+<p align="center">
+  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/ESP32_SH1106_Power-Meter_01.jpg?width=480" alt="1.3 inch SH1106 OLED wired to an ESP32 on a breadboard, displaying test text" width="420">
+</p>
+<p align="center"><sub>Photo: <a href="https://commons.wikimedia.org/wiki/File:ESP32_SH1106_Power-Meter_01.jpg">ESP32 SH1106 Power-Meter 01</a> by King of Pwnt, Wikimedia Commons, CC0.</sub></p>
 
 <p align="center">
   <img src="images/wiring_oled_sh1106_display.svg" alt="Wiring diagram: OLED VCC to 3.3V, GND to GND, SDA to GPIO 21, SCL to GPIO 22" width="800">
