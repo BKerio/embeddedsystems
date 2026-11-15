@@ -12,11 +12,11 @@ Each sketch is independent. Use them as a reference when wiring a module for the
 - [Requirements](#requirements)
 - [Getting Started](#getting-started)
 - [Wiring](#wiring)
-  - [Servo Motor](#1-servo-motor--servocpp)
-  - [HC-SR04 Ultrasonic Sensor](#2-hc-sr04-ultrasonic-sensor--esp32ultrasensorcpp)
-  - [4x3 Matrix Keypad](#3-4x3-matrix-keypad--keypadcpp)
-  - [4x4 Keypad + 16x2 I2C LCD](#4-4x4-keypad--16x2-i2c-lcd--lcdkeypadcpp)
-  - [1.3" SH1106 OLED](#5-13-sh1106-oled--oledesp32cpp)
+  - [Servo Motor](#1-servo-motor-servocpp)
+  - [HC-SR04 Ultrasonic Sensor](#2-hc-sr04-ultrasonic-sensor-esp32ultrasensorcpp)
+  - [4x3 Matrix Keypad](#3-4x3-matrix-keypad-keypadcpp)
+  - [4x4 Keypad + 16x2 I2C LCD](#4-4x4-keypad--16x2-i2c-lcd-lcdkeypadcpp)
+  - [1.3" SH1106 OLED](#5-13-sh1106-oled-oledesp32cpp)
 - [Troubleshooting](#troubleshooting)
 - [ESP32 Pin Notes](#esp32-pin-notes)
 
@@ -42,7 +42,7 @@ Each sketch is independent. Use them as a reference when wiring a module for the
 - USB data cable
 - Breadboard and jumper wires
 - The peripheral(s) for the example you want to run
-- **External 5–6 V power supply** for the servo example
+- **External 5-6 V power supply** for the servo example
 
 ### Software
 
@@ -107,12 +107,12 @@ Click **Upload**, then open the **Serial Monitor** at **115200 baud**.
 
 ## Wiring
 
-### 1. Servo Motor — `servo.cpp`
+### 1. Servo Motor (`servo.cpp`)
 
 | Servo Wire | Connect To |
 |------------|------------|
 | Signal (orange/yellow) | ESP32 GPIO 13 |
-| VCC (red) | External 5–6 V supply (+) |
+| VCC (red) | External 5-6 V supply (+) |
 | GND (brown/black) | External supply (−) **and** ESP32 GND |
 
 > [!CAUTION]
@@ -120,9 +120,9 @@ Click **Upload**, then open the **Serial Monitor** at **115200 baud**.
 >
 > The external supply's ground **must** be connected to the ESP32 GND. Without a shared ground, the control signal has no reference and the servo will not respond reliably.
 
-The servo is driven at 50 Hz with a 500–2400 µs pulse range. Adjust these values in `myServo.attach()` if your servo does not reach its full travel.
+The servo is driven at 50 Hz with a 500-2400 µs pulse range. Adjust these values in `myServo.attach()` if your servo does not reach its full travel.
 
-### 2. HC-SR04 Ultrasonic Sensor — `esp32+ultrasensor.cpp`
+### 2. HC-SR04 Ultrasonic Sensor (`esp32+ultrasensor.cpp`)
 
 | HC-SR04 Pin | ESP32 Pin |
 |-------------|-----------|
@@ -136,7 +136,7 @@ The servo is driven at 50 Hz with a 500–2400 µs pulse range. Adjust these val
 
 A reading of `0.00 cm` means no echo was received within the 30 ms timeout (object out of range, or a wiring fault).
 
-### 3. 4x3 Matrix Keypad — `keypad.cpp`
+### 3. 4x3 Matrix Keypad (`keypad.cpp`)
 
 | Keypad Pin | ESP32 GPIO |
 |------------|------------|
@@ -148,7 +148,7 @@ A reading of `0.00 cm` means no echo was received within the 30 ms timeout (obje
 | C2 | 32 |
 | C3 | 13 |
 
-### 4. 4x4 Keypad + 16x2 I2C LCD — `lcd+keypad.cpp`
+### 4. 4x4 Keypad + 16x2 I2C LCD (`lcd+keypad.cpp`)
 
 **LCD (I2C backpack)**
 
@@ -176,13 +176,13 @@ A reading of `0.00 cm` means no echo was received within the 30 ms timeout (obje
 
 | Key | Action |
 |-----|--------|
-| `0`–`9`, `A`–`D` | Append a character to the current field |
+| `0`-`9`, `A`-`D` | Append a character to the current field |
 | `#` | Confirm the phone number and move to amount, then confirm the amount |
 | `*` | Clear everything and start over |
 
 The LCD I2C address is set to `0x27`. If the screen lights up but shows no text, change it to `0x3F` and adjust the contrast potentiometer on the back of the module.
 
-### 5. 1.3" SH1106 OLED — `oled+esp32.cpp`
+### 5. 1.3" SH1106 OLED (`oled+esp32.cpp`)
 
 | OLED Pin | ESP32 Pin |
 |----------|-----------|
@@ -211,8 +211,8 @@ Most 1.3" 128x64 modules (such as the JMD 1.3A) use the **SH1106** controller, n
 
 ## ESP32 Pin Notes
 
-- **Generally safe for I/O:** 13, 14, 16–19, 21–23, 25–27, 32, 33
-- **Avoid:** 6–11 (connected to on-board flash), 1 and 3 (USB serial TX/RX)
+- **Generally safe for I/O:** 13, 14, 16-19, 21-23, 25-27, 32, 33
+- **Avoid:** 6-11 (connected to on-board flash), 1 and 3 (USB serial TX/RX)
 - **Use with care (boot strapping pins):** 0, 2, 5, 12, 15. These affect boot mode if pulled high or low at power-up.
 - **Input only:** 34, 35, 36, 39 (no internal pull-ups, cannot drive outputs)
 - **Default I2C:** SDA = GPIO 21, SCL = GPIO 22
