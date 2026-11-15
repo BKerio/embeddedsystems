@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="490" viewBox="0 0 880 490" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect x="1" y="1" width="878" height="488" rx="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<text x="40" y="44" font-size="22" font-weight="700" fill="#111827">4x3 Matrix Keypad</text>
+<text x="40" y="70" font-size="14" fill="#6b7280">keypad_4x3.cpp</text>
+<rect x="40" y="110" width="200" height="320" rx="10" fill="#1e3a5f"/>
+<text x="56" y="138" font-size="16" font-weight="700" fill="#ffffff">ESP32</text>
+<text x="56" y="156" font-size="12" fill="#cbd5e1">Dev Module</text>
+<path d="M 240 180 L 580 180" fill="none" stroke="#15803d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 216 L 580 216" fill="none" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 252 L 580 252" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 288 L 580 288" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 324 L 580 324" fill="none" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 360 L 580 360" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 396 L 580 396" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="224" y="185" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 14</text>
+<rect x="232" y="174" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="221" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 27</text>
+<rect x="232" y="210" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="257" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 26</text>
+<rect x="232" y="246" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="293" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 25</text>
+<rect x="232" y="282" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="329" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 33</text>
+<rect x="232" y="318" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="365" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 32</text>
+<rect x="232" y="354" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="401" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 13</text>
+<rect x="232" y="390" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<rect x="580" y="110" width="260" height="320" rx="10" fill="#334155"/>
+<text x="596" y="138" font-size="16" font-weight="700" fill="#ffffff">Keypad</text>
+<text x="596" y="156" font-size="12" fill="#cbd5e1">4 rows x 3 columns</text>
+<rect x="576" y="174" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="185" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">R1</text>
+<rect x="576" y="210" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="221" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">R2</text>
+<rect x="576" y="246" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="257" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">R3</text>
+<rect x="576" y="282" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="293" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">R4</text>
+<rect x="576" y="318" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="329" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">C1</text>
+<rect x="576" y="354" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="365" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">C2</text>
+<rect x="576" y="390" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="401" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">C3</text>
+<rect x="730" y="219.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="743.0" y="237.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">1</text>
+<rect x="762" y="219.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="775.0" y="237.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">2</text>
+<rect x="794" y="219.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="807.0" y="237.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">3</text>
+<rect x="730" y="251.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="743.0" y="269.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">4</text>
+<rect x="762" y="251.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="775.0" y="269.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">5</text>
+<rect x="794" y="251.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="807.0" y="269.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">6</text>
+<rect x="730" y="283.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="743.0" y="301.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">7</text>
+<rect x="762" y="283.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="775.0" y="301.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">8</text>
+<rect x="794" y="283.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="807.0" y="301.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">9</text>
+<rect x="730" y="315.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="743.0" y="333.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">*</text>
+<rect x="762" y="315.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="775.0" y="333.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">0</text>
+<rect x="794" y="315.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="807.0" y="333.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">#</text>
+<text x="40" y="468" font-size="12" fill="#6b7280">Pin order is counted left to right on the keypad ribbon. Check your keypad's datasheet.</text>
+</svg>

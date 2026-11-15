@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="768" viewBox="0 0 880 768" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect x="1" y="1" width="878" height="766" rx="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<text x="40" y="44" font-size="22" font-weight="700" fill="#111827">4x4 Keypad + 16x2 I2C LCD</text>
+<text x="40" y="70" font-size="14" fill="#6b7280">keypad_lcd_input.cpp</text>
+<rect x="40" y="110" width="200" height="598" rx="10" fill="#1e3a5f"/>
+<text x="56" y="138" font-size="16" font-weight="700" fill="#ffffff">ESP32</text>
+<text x="56" y="156" font-size="12" fill="#cbd5e1">Dev Module</text>
+<path d="M 240 180 L 580 180" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 216 L 580 216" fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 252 L 580 252" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 288 L 580 288" fill="none" stroke="#7c3aed" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 422 L 580 422" fill="none" stroke="#15803d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 458 L 580 458" fill="none" stroke="#16a34a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 494 L 580 494" fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 530 L 580 530" fill="none" stroke="#4ade80" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 566 L 580 566" fill="none" stroke="#1d4ed8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 602 L 580 602" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 638 L 580 638" fill="none" stroke="#3b82f6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 674 L 580 674" fill="none" stroke="#60a5fa" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="332.0" y="650" width="156" height="18" rx="4" fill="#fef3c7" stroke="#f59e0b"/>
+<text x="410.0" y="663" font-size="11" fill="#92400e" text-anchor="middle">boot pin: unplug to upload</text>
+<text x="224" y="185" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">5V</text>
+<rect x="232" y="174" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="221" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GND</text>
+<rect x="232" y="210" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="257" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 21</text>
+<rect x="232" y="246" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="293" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 22</text>
+<rect x="232" y="282" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="427" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 14</text>
+<rect x="232" y="416" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="463" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 27</text>
+<rect x="232" y="452" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="499" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 26</text>
+<rect x="232" y="488" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="535" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 25</text>
+<rect x="232" y="524" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="571" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 33</text>
+<rect x="232" y="560" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="607" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 32</text>
+<rect x="232" y="596" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="643" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 13</text>
+<rect x="232" y="632" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="679" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 12</text>
+<rect x="232" y="668" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<rect x="580" y="110" width="260" height="212" rx="10" fill="#3f6212"/>
+<text x="596" y="138" font-size="16" font-weight="700" fill="#ffffff">16x2 LCD</text>
+<text x="596" y="156" font-size="12" fill="#cbd5e1">I2C backpack (0x27)</text>
+<rect x="576" y="174" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="185" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">VCC</text>
+<rect x="576" y="210" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="221" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">GND</text>
+<rect x="576" y="246" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="257" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">SDA</text>
+<rect x="576" y="282" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="293" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">SCL</text>
+<rect x="698" y="194.0" width="124" height="44" rx="3" fill="#84cc16" stroke="#365314" stroke-width="2"/>
+<text x="706" y="213.0" font-size="12" font-family="Consolas, Menlo, monospace" fill="#1a2e05">Phone:</text>
+<text x="706" y="230.0" font-size="12" font-family="Consolas, Menlo, monospace" fill="#1a2e05">0712...</text>
+<rect x="580" y="352" width="260" height="356" rx="10" fill="#334155"/>
+<text x="596" y="380" font-size="16" font-weight="700" fill="#ffffff">Keypad</text>
+<text x="596" y="398" font-size="12" fill="#cbd5e1">4 rows x 4 columns</text>
+<rect x="576" y="416" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="427" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">R1</text>
+<rect x="576" y="452" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="463" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">R2</text>
+<rect x="576" y="488" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="499" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">R3</text>
+<rect x="576" y="524" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="535" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">R4</text>
+<rect x="576" y="560" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="571" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">C1</text>
+<rect x="576" y="596" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="607" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">C2</text>
+<rect x="576" y="632" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="643" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">C3</text>
+<rect x="576" y="668" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="679" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">C4</text>
+<rect x="698" y="479.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="711.0" y="497.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">1</text>
+<rect x="730" y="479.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="743.0" y="497.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">2</text>
+<rect x="762" y="479.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="775.0" y="497.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">3</text>
+<rect x="794" y="479.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="807.0" y="497.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">A</text>
+<rect x="698" y="511.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="711.0" y="529.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">4</text>
+<rect x="730" y="511.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="743.0" y="529.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">5</text>
+<rect x="762" y="511.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="775.0" y="529.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">6</text>
+<rect x="794" y="511.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="807.0" y="529.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">B</text>
+<rect x="698" y="543.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="711.0" y="561.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">7</text>
+<rect x="730" y="543.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="743.0" y="561.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">8</text>
+<rect x="762" y="543.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="775.0" y="561.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">9</text>
+<rect x="794" y="543.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="807.0" y="561.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">C</text>
+<rect x="698" y="575.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="711.0" y="593.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">*</text>
+<rect x="730" y="575.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="743.0" y="593.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">0</text>
+<rect x="762" y="575.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="775.0" y="593.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">#</text>
+<rect x="794" y="575.0" width="26" height="26" rx="4" fill="#f8fafc" stroke="#94a3b8"/>
+<text x="807.0" y="593.0" font-size="13" font-weight="600" fill="#334155" text-anchor="middle">D</text>
+<text x="40" y="746" font-size="12" fill="#6b7280">Keys: 0-9 / A-D enter input,  # confirms,  * resets.</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="430" viewBox="0 0 880 430" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+<rect x="1" y="1" width="878" height="428" rx="14" fill="#ffffff" stroke="#e5e7eb" stroke-width="2"/>
+<text x="40" y="44" font-size="22" font-weight="700" fill="#111827">Servo Motor</text>
+<text x="40" y="70" font-size="14" fill="#6b7280">servo_sweep.cpp</text>
+<path d="M 240 180 L 580 180" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 316 L 520 316 L 520 216 L 580 216" fill="none" stroke="#dc2626" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 352 L 550 352 L 550 252 L 580 252" fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 240 216 L 330 216 L 330 352" fill="none" stroke="#1f2937" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="330" cy="352" r="6" fill="#1f2937"/>
+<rect x="342" y="256" width="118" height="20" rx="4" fill="#fee2e2" stroke="#dc2626"/>
+<text x="401" y="270" font-size="12" font-weight="700" fill="#991b1b" text-anchor="middle">Shared ground</text>
+<rect x="40" y="110" width="200" height="140" rx="10" fill="#1e3a5f"/>
+<text x="56" y="138" font-size="16" font-weight="700" fill="#ffffff">ESP32</text>
+<text x="56" y="156" font-size="12" fill="#cbd5e1">Dev Module</text>
+<text x="224" y="185" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GPIO 13</text>
+<rect x="232" y="174" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="221" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">GND</text>
+<rect x="232" y="210" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<rect x="40" y="270" width="200" height="110" rx="10" fill="#7f1d1d"/>
+<text x="56" y="298" font-size="16" font-weight="700" fill="#ffffff">Power Supply</text>
+<text x="56" y="316" font-size="12" fill="#cbd5e1">External 5-6 V</text>
+<text x="224" y="321" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">+ 5V</text>
+<rect x="232" y="310" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="224" y="357" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff" text-anchor="end">- GND</text>
+<rect x="232" y="346" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<rect x="580" y="110" width="260" height="176" rx="10" fill="#1e40af"/>
+<text x="596" y="138" font-size="16" font-weight="700" fill="#ffffff">Servo</text>
+<text x="596" y="156" font-size="12" fill="#cbd5e1">SG90 / MG996R</text>
+<rect x="576" y="174" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="185" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">Signal</text>
+<rect x="576" y="210" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="221" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">VCC</text>
+<rect x="576" y="246" width="12" height="12" rx="2" fill="#fbbf24" stroke="#92400e"/>
+<text x="596" y="257" font-size="13" font-family="Consolas, Menlo, monospace" fill="#ffffff">GND</text>
+<rect x="708" y="192.0" width="100" height="52" rx="6" fill="#1d4ed8" stroke="#1e3a8a" stroke-width="2"/>
+<circle cx="738" cy="218.0" r="14" fill="#f8fafc" stroke="#1e3a8a" stroke-width="2"/>
+<rect x="732" y="178.0" width="12" height="54" rx="6" fill="#f8fafc" stroke="#1e3a8a" stroke-width="2" transform="rotate(35 738 218.0)"/>
+<text x="40" y="408" font-size="12" fill="#6b7280">Never power the servo from the ESP32 3.3V or 5V pins. Wire colours: orange = signal, red = +, black = ground.</text>
+</svg>
