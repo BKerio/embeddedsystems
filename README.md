@@ -1,6 +1,5 @@
 # ESP32 Hardware Toolkit
-
-Toolkit
+ToolKit
 
 A collection of small, self-contained Arduino sketches for the **ESP32 Dev Module**, each demonstrating how to wire and drive a common peripheral: a servo motor, an ultrasonic distance sensor, a matrix keypad, a 16x2 I2C LCD, and a 1.3" SH1106 OLED display.
 
